@@ -1,65 +1,106 @@
-import React from 'react';
-import { FaCircle } from "react-icons/fa6";
-import Image from "next/image";
+'use client';
 
-function Trendingproduct() {
-    return (
-        <div>
-            <section className="text-gray-600 body-font">
-                <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center ">
+import Image from 'next/image';
 
-                    {/* Image Section */}
+function TrendingProducts() {
+  const products = [
+    { id: 1, img: "/images/chair5.png" },
+    { id: 2, img: "/images/chair6.png" },
+    { id: 3, img: "/images/chair7.png" },
+    { id: 4, img: "/images/product5.png" },
+  ];
 
-                    <div className="md:w-1/3 flex justify-center items-center  relative">
-                        <div className="relative bg-gradient-to-r from-pink-100 to-purple-200 rounded-full p-5 shadow-xl mt-10 mx-auto">
-                            <Image
-                                src={"/bluesofa.png"}
-                                alt="Furniture Chair"
-                                width={706}
-                                height={689}
-                                className="object-contain w-full h-auto"
-                            />
-                        </div>
-                    </div>
+  const exclusiveProducts = [
+    { id: 1, img: "/images/chair8.png" },
+    { id: 2, img: "/images/chair9.png" },
+    { id: 3, img: "/images/chair10.png" },
+  ];
 
-                    {/* Content Section */}
-                    <div className="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
-                        <h1 className="title-font sm:text-4xl text-3xl w-full mb-4 font-bold text-gray-900 font-sans">
-                            Unique Features Of Latest &
-                            <br className="hidden lg:inline-block" />
-                            Trending Products
-                        </h1>
-                        <p className="mt-5 mb-4 leading-relaxed flex items-center">
-                            <FaCircle className="text-[#FB2E86] mr-2" />
-                            All frames constructed with hardwood solids and laminates
-                        </p>
-                        <p className=" leading-relaxed flex items-center mb-4">
-                            <FaCircle className="text-blue-500 mr-2" />
-                            Reinforced with double wood dowels, glue, screw - nails corner
-                            blocks and machine nails
-                        </p>
-                        <p className="leading-relaxed flex items-center mb-4">
-                            <FaCircle className="text-green-600 mr-2" />
-                            Arms, backs and seats are structurally reinforced
-                        </p>
+  return (
+    <div className="w-full bg-white py-20">
+      {/* Section Heading */}
+      <h2 className="text-[#3F509E] text-3xl font-bold text-center mb-16">Trending Products</h2>
 
-                        <div className="flex justify-center mt-6">
-                            <button className="inline-flex text-white  bg-[#FB2E86] border-0 py-2 px-6 focus:outline-none hover:bg-[#fb2e91be] rounded text-lg">
-                                Add To Cart
-                            </button>
-                            <div className='ml-4'>
-                                <h3 className="text-lg font-semibold">B&B Italian Sofa</h3>
-                                <p className="text-gray-600">$32.00</p>
+      {/* Product Grid */}
+      <div className="w-[1000px] max-w-screen-xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 mb-20">
+        {products.map((product) => (
+          <div key={product.id} className="group relative">
+            {/* Image with Gray Background */}
+            <div className="bg-gray-200 flex justify-center items-center p-6 h-[280px] relative">
+              <Image
+                src={product.img}
+                alt="Trending Product"
+                width={200}
+                height={200}
+                className="object-contain transition-all duration-300 group-hover:opacity-90"
+              />
+            </div>
 
+            {/* Product Details */}
+            <div className="mt-4 text-center">
+              <h3 className="text-[#3F509E] font-semibold text-lg mb-2">Cantilever Chair</h3>
+              <p className="text-[#3F509E] font-bold inline-block">$26.00</p>
+              <span className="text-gray-500 line-through ml-2">$42.00</span>
+            </div>
+          </div>
+        ))}
+      </div>
 
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </section>
+      {/* Vouchers and Product List Section */}
+      <div className="w-[1000px] max-w-screen-l mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+        {/* Voucher 1 */}
+        <div className="bg-blue-50 p-8 flex flex-col justify-between relative h-[250px]">
+          <h3 className="text-[#3F509E] text-2xl font-bold mb-4">23% Off in all products</h3>
+          <button className="text-pink-600 underline text-left mb-28 font-normal">Shop Now</button>
+          <Image
+            src="/images/voucher1.png"
+            alt="Voucher Image"
+            width={200}
+            height={200}
+            className="absolute bottom-2 ml-32  object-contain"
+          />
         </div>
-    );
+
+        {/* Voucher 2 */}
+        <div className="bg-blue-50 p-8 flex flex-col justify-between relative h-[250px]">
+          <h3 className="text-[#3F509E] text-2xl font-bold mb-4">23% Off in all products</h3>
+   {/* Button */}
+   <button className="text-pink-600 underline font-normal mb-28 text-left">
+    View Collection
+  </button>
+          <Image
+            src="/images/voucher2.png"
+            alt="Voucher Image"
+            width={200}
+            height={200}
+             className="absolute pt-32 ml-20  object-contain"
+          />
+        </div>
+
+        {/* Exclusive Product List */}
+        <div className="flex flex-col space-y-4">
+          {exclusiveProducts.map((product) => (
+            <div
+              key={product.id}
+              className="bg-gray-200 flex items-center p-2 h-[70px] rounded shadow"
+            >
+              <Image
+                src={product.img}
+                alt="Exclusive Product"
+                width={80}
+                height={80}
+                className="object-contain mr-4"
+              />
+              <div>
+                <h3 className="text-[#3F509E] font-semibold text-lg mb-1">Exclusive Seat Chair</h3>
+                <p className="text-[#3F509E] font-bold inline-block">$32.00</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
 }
 
-export default Trendingproduct;
+export default TrendingProducts;

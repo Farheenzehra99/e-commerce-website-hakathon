@@ -1,24 +1,33 @@
-import React from "react";
-import HeroSection from "./components/HeroSection";
-import AboutUs from "./about/page";
-import Products from "./components/Products";
-import Latest from "./components/Latest";
-import Features from "./components/Features";
-import Trendingproduct from "./components/TrendingProduct";
-import DiscountItem from "./components/DiscountItem";
-const Home = () => {
+'use lient'
 
-  return (
-    <>
-    <HeroSection/>
-    <Features/>
-    <Latest/>
-    <Products/>
-    <Trendingproduct/>
-    <DiscountItem/>
-    <AboutUs/>
-    </>
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import TopCategories from "./components/TopCategories";
+import LatestProducts from "./components/LatestProducts";
+import Feature from "./components/FeatureProducts";
+import Offers from "./components/Offers";
+import Unique from "./components/Unique";
+import TrendingProducts from "./components/TrendingProduct";
+import Newslater from "./components/Newslater";
+import HeroSection from "./components/Hero";
+import Discount from "./components/Discount";
+
+function Homepage(){
+  return(
+    <div>
+      <Header />
+      <HeroSection />
+      <Feature />
+      <LatestProducts />
+      <Offers />
+      <Unique />
+      <TrendingProducts />
+      <Discount />
+      <TopCategories />
+      <Newslater />
+      <Footer />
+    </div>
   )
 }
 
-export default Home;
+export default Homepage;
