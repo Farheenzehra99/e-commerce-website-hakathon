@@ -1,7 +1,5 @@
 'use lient'
 
-import Header from "./components/Header";
-import Footer from "./components/Footer";
 import TopCategories from "./components/TopCategories";
 import LatestProducts from "./components/LatestProducts";
 import Feature from "./components/FeatureProducts";
@@ -15,7 +13,6 @@ import Discount from "./components/Discount";
 function Homepage(){
   return(
     <div>
-      <Header />
       <HeroSection />
       <Feature />
       <LatestProducts />
@@ -25,7 +22,6 @@ function Homepage(){
       <Discount />
       <TopCategories />
       <Newslater />
-      <Footer />
     </div>
   )
 }

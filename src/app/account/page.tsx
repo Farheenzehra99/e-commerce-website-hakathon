@@ -2,14 +2,21 @@
 import Image from 'next/image';
 import React from 'react';
 import Link from 'next/link';
-import Header from '../components/Header';
 import Footer from '../components/Footer';
 
 function AccountPage() {
   return (
     <>
-      {/* Header */}
-      <Header />
+      {/* Header Section */}
+      <div className="bg-blue-50 py-8">
+        <div className="max-w-[1200px] mx-auto px-4 ">
+          <h1 className="text-3xl font-bold text-[#101750] mb-2">My Account</h1>
+          <p className="text-sm text-black">
+            Home <span className="text-black">.</span> Pages <span className="text-black">.</span>{" "}
+            <span className="text-[#FB2E86]">My Account</span>
+          </p>
+        </div>
+      </div>
 
       {/* Page Content */}
       <div className="bg-gray-100 py-10">
@@ -95,8 +102,6 @@ function AccountPage() {
             className='ml-80'
           />
 
-      {/* Footer */}
-      <Footer />
     </>
   );
 }

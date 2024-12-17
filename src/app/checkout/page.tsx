@@ -1,8 +1,6 @@
 'use client';
 import Link from "next/link";
 import React, { useState } from "react";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
 
 const CheckoutPage = () => {
   const [formData, setFormData] = useState({
@@ -28,7 +26,6 @@ const CheckoutPage = () => {
 
   return (
     <>
-      <Header />
       <div className="min-h-screen bg-gray-50 py-12 px-6 lg:px-12">
         <div className="max-w-4xl mx-auto bg-white rounded-lg shadow-md p-6 lg:p-12">
           <h1 className="text-3xl font-bold text-center text-[#1D3178] mb-8">Billing Information</h1>
@@ -187,7 +184,6 @@ const CheckoutPage = () => {
           </form>
         </div>
       </div>
-      <Footer />
     </>
   );
 };

@@ -1,8 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
 
 function ForgotPassword() {
   const [email, setEmail] = useState('');
@@ -24,7 +22,6 @@ function ForgotPassword() {
 
   return (
     <>
-      <Header />
       <div className="flex justify-center items-center min-h-screen bg-[#f9f9f9] py-12">
         <div className="w-full max-w-lg bg-white rounded-lg shadow-md p-8">
           <h1 className="text-3xl font-bold text-center text-[#1D3178] mb-4">
@@ -71,7 +68,6 @@ function ForgotPassword() {
           )}
         </div>
       </div>
-      <Footer />
     </>
   );
 }

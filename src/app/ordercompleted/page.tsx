@@ -2,13 +2,10 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
 
 function OrderCompleted() {
   return (
     <>
-      <Header />
       <div className="min-h-screen bg-gray-100 py-12">
         <div className="max-w-3xl mx-auto bg-white rounded-lg shadow-md p-8 space-y-6 text-center">
           {/* Heading */}
@@ -54,7 +51,6 @@ function OrderCompleted() {
           </div>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

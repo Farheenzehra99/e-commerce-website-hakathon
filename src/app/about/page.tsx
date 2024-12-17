@@ -1,12 +1,22 @@
 import Image from "next/image";
 import Link from "next/link";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
 
 const AboutPage = () => {
   return (
     <>
-    <Header />
+      {/* Header Section */}
+      <div className="bg-blue-50 py-8">
+        <div className="max-w-[1200px] mx-auto px-4 ">
+          <h1 className="text-3xl font-bold text-[#101750] mb-2">About Us</h1>
+          <p className="text-sm text-black">
+            Home <span className="text-black">.</span> Pages <span className="text-black">.</span>{" "}
+            <span className="text-[#FB2E86]">About Us</span>
+          </p>
+        </div>
+      </div>
+
+
+
     <div className="px-6 lg:px-20 py-10 font-sans text-[#151875]">
       {/* Hero Section */}
       <section className="grid grid-cols-1 lg:grid-cols-2 items-center gap-8">
@@ -93,7 +103,6 @@ const AboutPage = () => {
         </p>
       </section>
     </div>
-    <Footer />
     </>
   );
 };

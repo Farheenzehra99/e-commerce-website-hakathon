@@ -3,9 +3,6 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-
 // Define types for Cart Item
 type CartItem = {
   id: number;
@@ -97,7 +94,6 @@ const Cart = () => {
 
   return (
     <>
-      <Header />
       <div className="p-6 lg:p-12 grid grid-cols-1 lg:grid-cols-3 gap-8">
         {/* Cart Items */}
         <div className="lg:col-span-2">
@@ -190,7 +186,6 @@ const Cart = () => {
             </li>
         </div>
       </div>
-      <Footer />
     </>
   );
 };

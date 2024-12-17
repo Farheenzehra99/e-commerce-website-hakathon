@@ -1,5 +1,4 @@
 'use client';
-import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { 
@@ -17,24 +16,16 @@ function Header() {
 
   return (
     <>
-      {/* Top Bar */}
-      <TopBar />
-
       {/* Main Header */}
       <div className="w-full h-[80px] flex justify-center items-center border-b-2">
         <div className="w-full max-w-[1200px] h-full flex justify-between items-center px-10">
           {/* Left Section: Logo and Search Bar */}
           <div className="flex items-center gap-8">
- {/* Logo */}
- 
- <Image
-            src="/images/Hekto.png"
-            width={98}
-            height={34}
-            alt="logo"
-          />
-          
-            {/* Search Bar */}
+
+       {/* Logo */}
+
+         <h1 className="text-3xl text-[#101750] font-bold">Hekto</h1>
+             {/* Search Bar */}
             <div className="hidden sm:flex items-center border rounded-md overflow-hidden bg-gray-100">
               <input
                 type="text"
@@ -74,7 +65,7 @@ function Header() {
                       <Link href="/ordercompleted">Order Completed</Link>
                     </li>
                     <li className="px-4 py-2 hover:bg-gray-100">
-                      <Link href="/about-us">About Us</Link>
+                      <Link href="/about">About Us</Link>
                     </li>
                     <li className="px-4 py-2 hover:bg-gray-100">
                       <Link href="/contact-us">Contact Us</Link>

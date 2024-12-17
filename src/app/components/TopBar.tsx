@@ -15,7 +15,7 @@ const TopBar = () => {
           {/* Email */}
           <a href="mailto:mhhasanul@gmail.com" className="flex items-center gap-2 hover:text-gray-200">
             <FaEnvelope />
-            <span>mhhasanul@gmail.com</span>
+            <span>farheenzehra@gmail.com</span>
           </a>
           {/* Phone */}
           <a href="tel:1234567890" className="flex items-center gap-2 hover:text-gray-200">

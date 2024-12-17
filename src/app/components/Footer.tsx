@@ -116,7 +116,7 @@ import Link from "next/link"
 function Footer() {
   return (
     <div>
-        <footer className="text-gray-600 body-font bg-[#E7E4F8]">
+        <footer className="text-gray-600 body-font bg-blue-50">
   <div className="container px-5 py-24 mx-auto   ">
     <div className="flex flex-wrap md:text-left text-center order-first">
 

@@ -1,8 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { AiOutlineHeart, AiOutlineShoppingCart, AiOutlineEye } from "react-icons/ai";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
 
 const shoplist = [
   {
@@ -77,7 +75,17 @@ const ShopList = () => {
  return (
  
   <>
-  <Header /> 
+      {/* Header Section */}
+      <div className="bg-blue-50 py-8">
+        <div className="max-w-[1200px] mx-auto px-4 ">
+          <h1 className="text-3xl font-bold text-[#101750] mb-2">Product Detail</h1>
+          <p className="text-sm text-black">
+            Home <span className="text-black">.</span> Pages <span className="text-black">.</span>{" "}
+            <span className="text-[#FB2E86]">Product</span>
+          </p>
+        </div>
+      </div>
+
     <div className="font-sans text-[#151875]">
       {/* Header Section */}
       <div className="py-28 px-8">
@@ -226,7 +234,6 @@ const ShopList = () => {
         </div>
       </div>
     </div>
-    <Footer />
     </>
   );
 };
